@@ -1,0 +1,10 @@
+# This is an Asset Catalog Definition file for Blender.
+#
+# Empty lines and lines starting with `#` will be ignored.
+# The first non-ignored line should be the version indicator.
+# Other lines are of the format "UUID:catalog/path/for/assets:simple catalog name"
+
+VERSION 1
+
+831bcc8d-6adb-45cf-8bb1-0f2b7712fc37:hdmcg:hdmcg
+fa8dc715-17c3-4b31-8ceb-a19d847a40a8:hdmcg/Models:hdmcg-Models

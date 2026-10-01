@@ -1,0 +1,123 @@
+{
+    "palette": [
+        [
+            1.0,
+            0.9686,
+            0.0
+        ],
+        [
+            1.0,
+            0.7176,
+            0.0
+        ],
+        [
+            0.9, 0.3333333, 0.0
+        ],
+        [
+            0.8745,
+            0.0156,
+            0.9372
+        ],
+        [
+            0.6314,
+            0.1451,
+            1.0
+        ],
+        [
+            0.0823,
+            0.2902,
+            0.7686
+        ],
+        [
+            0.0,
+            0.4823,
+            1.0
+        ],
+        [
+            0.0,
+            1.0,
+            1.0
+        ],
+        [
+            0.0,
+            0.779,
+            0.4503
+        ],
+        [
+            0.0,
+            0.713,
+            0.0
+        ],
+        [
+            0.4197,
+            0.953,
+            0.0
+        ],
+        [
+            1.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            1.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.5,
+            0.5,
+            0.5
+        ],
+        [
+            1.0,
+            1.0,
+            1.0
+        ]
+    ],
+    "color_button_size": 18,
+    "default_color_index": 1,
+    "icon_button_size": 40,
+    "icon_order": [
+        "curveLocator",
+        "square",
+        "circle",
+        "box",
+        "arrow",
+        "doubleArrow",
+        "fourArrows",
+        "disc",
+        "circleOneArrow",
+        "circleTwoArrows",
+        "circleThreeArrows",
+        "circleFourArrows",
+        "cycle",
+        "arcArrow",
+        "arcArrow2",
+        "bowedArrows",
+        "needle",
+        "triangle",
+        "snow",
+        "twoTris",
+        "fourTris",
+        "diamond",
+        "pyramid",
+        "wave",
+        "sphere",
+        "ik",
+        "fk",
+        "shoe",
+        "foot",
+        "hand4",
+        "hand5",
+        "eyes"
+    ],
+    "window_sizes": [
+        ["Regular", 365, 320], 
+        ["Narrow", 188, 600]
+    ]
+}

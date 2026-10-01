@@ -1,0 +1,51 @@
+# --- Projektspezifisch ---
+*_launcher.bat
+*.lnk
+*.url
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtuelle Umgebungen
+.venv/
+venv/
+env/
+ENV/
+
+# Build / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Tests / Coverage / Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Umgebungsvariablen / Secrets
+.env
+.env.*
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- OS ---
+Thumbs.db
+desktop.ini
+.DS_Store
