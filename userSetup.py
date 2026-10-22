@@ -12,5 +12,11 @@ def add_hotkeys():
     import hdmcg.maya.hotkeys
 
 
+def add_toolbox_buttons():
+    from hdmcg.maya.toolbox import add_toolbox_buttons
+    add_toolbox_buttons()
+
+
 executeDeferred(add_shelf_icon)
 executeDeferred(add_hotkeys)
+executeDeferred(add_toolbox_buttons)

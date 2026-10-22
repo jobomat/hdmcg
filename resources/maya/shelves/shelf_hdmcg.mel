@@ -40,7 +40,7 @@ global proc shelf_hdmcg () {
     ;
     separator
         -enable 1
-        -width 17
+        -width 34
         -height 35
         -manage 1
         -visible 1
@@ -86,7 +86,7 @@ global proc shelf_hdmcg () {
     ;
     separator
         -enable 1
-        -width 17
+        -width 34
         -height 35
         -manage 1
         -visible 1
@@ -305,7 +305,7 @@ global proc shelf_hdmcg () {
     ;
     separator
         -enable 1
-        -width 17
+        -width 34
         -height 35
         -manage 1
         -visible 1
@@ -352,7 +352,7 @@ global proc shelf_hdmcg () {
     ;
     separator
         -enable 1
-        -width 17
+        -width 34
         -height 35
         -manage 1
         -visible 1

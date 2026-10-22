@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "buttons": [
+    {
+      "id": "dev_tools",
+      "icon": "hdm.png",
+      "tooltip": "Dev Tools for managing python modules and inspecting environment variables.",
+      "call": "hdmcg.maya.dev:show_dev_tools",
+      "kwargs": {"mod": "hdmcg", "env": "PYTHONPATH"}
+    },
+    {
+      "id": "ayon_save_next_version",
+      "icon": "ayon_version_bump.png",
+      "tooltip": "AYON: Save next workfile version",
+      "call": "hdmcg.maya.ayon:bump_workfile_version",
+      "requires": ["ayon_core"]
+    }
+  ]
+}

@@ -48,6 +48,21 @@ The appearance of hdmcg varys from DCC to DCC:
 - **Maya** shows `hdmcg` shelf tab.
 - **Blender** shows a `hdmcg` menu.
 
+## Optional for Maya: Custom Toolbox buttons
+You can add your own buttons to Maya's Toolbox (the vertical bar on the left) via a JSON file. Point the environment variable `MAYA_TOOLBOX_CONFIG` at it in your Maya launcher, *before* the line that starts Maya:
+
+```bat
+set MAYA_TOOLBOX_CONFIG=%~dp0resources\maya\toolbox_example.json
+```
+
+Have a look at `resources/maya/toolbox_example.json` for the format. Each button needs a unique `id` and exactly one action:
+- `"call": "package.module:function"` calls a Python function (optional `"args": [...]` and `"kwargs": {...}`). The module is only imported when you click the button.
+- `"runtime_command": "JointTool"` runs a Maya runtime command.
+
+Optionally add `"requires": ["ayon_core"]` (module names) to a button: if one of these modules isn't installed, the button is simply not created.
+
+`icon` can be an icon name Maya knows (e.g. from `resources/maya/icons`) or a path relative to the JSON file. If the variable isn't set, the file doesn't exist or an entry is broken, Maya still starts normally - check the Script Editor for lines starting with `[hdmcg]`.
+
 ## Set up PySide6 for Blender
 In order to use some of the hdmcg-tools in Blender, a working verion of PySide6 is required. In case PySide6 is not setup (correctly) the pure Blender tools of hdmcg will still work. To set up PySide6 for Blender-use follow these steps:
 
