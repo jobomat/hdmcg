@@ -1,4 +1,5 @@
 import maya.cmds as cmds
+import maya.api.OpenMaya as om
 
 
 def normalize_shader_assignments(transform):
@@ -24,3 +25,27 @@ def normalize_shader_assignments(transform):
 
 # for obj in cmds.ls(sl=True):
 #     normalize_shader_assignments(obj)
+
+
+def bake_pref(shape, rest_frame=None, name="Pref", world=True):
+    """Speichert die aktuellen Vertexpositionen als mtoa_varying_<name> am Shape.
+    shape = cmds.listRelatives(cmds.ls(sl=True)[0], shapes=True)[0]
+    bake_pref(shape, rest_frame=1)
+    """
+    if rest_frame is not None:
+        cmds.currentTime(rest_frame)
+
+    sel = om.MSelectionList()
+    sel.add(shape)
+    dag = sel.getDagPath(0)
+    space = om.MSpace.kWorld if world else om.MSpace.kObject
+    pts = om.MFnMesh(dag).getPoints(space)          # MPointArray, deformierter Zustand!
+
+    attr = "mtoa_varying_" + name
+    if not cmds.attributeQuery(attr, node=shape, exists=True):
+        cmds.addAttr(shape, longName=attr, dataType="pointArray")
+
+    data = om.MFnPointArrayData().create(pts)
+    plug = om.MFnDependencyNode(dag.node()).findPlug(attr, False)
+    plug.setMObject(data)
+    print("{}: {} Punkte nach .{} geschrieben".format(shape, len(pts), attr))
