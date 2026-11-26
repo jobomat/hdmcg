@@ -379,7 +379,7 @@ global proc shelf_hdmcg () {
         -style "iconOnly" 
         -marginWidth 0
         -marginHeight 1
-        -command "from hdmcg.maya.shader import bake_pref\n\nshape = cmds.listRelatives(cmds.ls(sl=True)[0], shapes=True)[0]\nbake_pref(shape, rest_frame=1)" 
+        -command "from hdmcg.maya.shader import PrefBaker\nPrefBaker()" 
         -sourceType "python" 
         -commandRepeatable 1
         -flat 1
